@@ -3,9 +3,11 @@ package handlers
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
-	"log" 
+
 	"github.com/tahmid-saj/go-bookings-app/internal/config"
+	"github.com/tahmid-saj/go-bookings-app/internal/forms"
 	"github.com/tahmid-saj/go-bookings-app/internal/models"
 	"github.com/tahmid-saj/go-bookings-app/internal/render"
 )
@@ -55,7 +57,14 @@ func (m *Repository) About(w http.ResponseWriter, r *http.Request) {
 
 // Reservation renders the make a reservation page and displays form
 func (m *Repository) Reservation(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{})
+	render.RenderTemplate(w, r, "make-reservation.page.tmpl", &models.TemplateData{
+		Form: forms.New(nil),
+	})
+}
+
+// PostReservation handles the posting of a reservation form
+func (m *Repository) PostReservation(w http.ResponseWriter, r *http.Request) {
+	
 }
 
 // Generals renders the room page
