@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 	"log" 
-	"github.com/tahmid-saj/go-bookings-app/pkg/config"
-	"github.com/tahmid-saj/go-bookings-app/pkg/models"
-	"github.com/tahmid-saj/go-bookings-app/pkg/render"
+	"github.com/tahmid-saj/go-bookings-app/internal/config"
+	"github.com/tahmid-saj/go-bookings-app/internal/models"
+	"github.com/tahmid-saj/go-bookings-app/internal/render"
 )
 
 // Repo the repository used by the handlers
