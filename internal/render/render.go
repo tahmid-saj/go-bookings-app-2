@@ -7,10 +7,9 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
-
 	"github.com/justinas/nosurf"
-	"github.com/tahmid-saj/go-bookings-app/pkg/config"
-	"github.com/tahmid-saj/go-bookings-app/pkg/models"
+	"github.com/tahmid-saj/go-bookings-app/internal/config"
+	"github.com/tahmid-saj/go-bookings-app/internal/models"
 )
 
 var functions = template.FuncMap{}
